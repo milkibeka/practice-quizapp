@@ -1,5 +1,10 @@
 import { quizQuestions } from './questions.js';
-const myQuestions = quizQuestions;
+const myQuestions = quizQuestions.map(question => ({
+  question: question.question,
+  choices: question.choices,
+  answer: question.answer
+}));
+
 const startBtn = document.getElementById("start");
 const questionContainer = document.getElementById("questions");
 const questionEl = document.getElementById("question-title");
