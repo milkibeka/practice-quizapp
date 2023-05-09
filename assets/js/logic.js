@@ -1,5 +1,5 @@
 
-const myQuestions = window.quizQuestions;
+const myQuestions = quizQuestions;
 
 
 const startBtn = document.getElementById("start");
