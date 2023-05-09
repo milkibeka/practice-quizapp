@@ -25,7 +25,7 @@ function startQuiz() {
   score = 0;
   secondsLeft = 60;
   startBtn.classList.add("hide");
-  shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
+  shuffledQuestions = quizQuestions.question.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove("hide");
   setNextQuestion();
