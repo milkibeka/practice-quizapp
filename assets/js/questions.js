@@ -1,4 +1,7 @@
-const questions = [  {    question: "Which of the following is NOT a primitive data type in JavaScript?",    choices: ["Number", "Boolean", "Undefined", "String", "Array"],
+const quizQuestions = [  
+  {    
+    question: "Which of the following is NOT a primitive data type in JavaScript?",    
+    choices: ["Number", "Boolean", "Undefined", "String", "Array"],
     answer: "Array"
   },
   {
@@ -47,4 +50,4 @@ const questions = [  {    question: "Which of the following is NOT a primitive d
     answer: "object"
   }
 ];
-export { questions };
+

@@ -1,5 +1,5 @@
 
-const questions = window.questions;
+const questions = window.quizQuestions;
 
 const startBtn = document.getElementById("start");
 const questionContainer = document.getElementById("questions");
@@ -50,7 +50,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  questionEl.innerText = questions.question;
+  questionEl.innerText = quizQuestions.question;
   question.choices.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = choice;
