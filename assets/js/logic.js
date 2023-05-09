@@ -57,7 +57,7 @@ function showQuestion(question) {
   questionEl.innerText = question.question;
   question.choices.forEach((answer) => {
     const button = document.createElement("button");
-    button.innerText = choice;
+    button.innerText = answer;  // change 'choice' to 'answer'
     button.classList.add("btn");
     if (answer) {
       button.dataset.correct = answer;
