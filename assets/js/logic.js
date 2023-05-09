@@ -50,6 +50,10 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+  if (!questionEl) {
+    return;
+  }
+  
   questionEl.innerText = question.question;
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
