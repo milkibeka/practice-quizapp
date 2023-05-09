@@ -50,4 +50,4 @@
     answer: "object"
   }
 ];
-window.quizQuestions = quizQuestions;
+
