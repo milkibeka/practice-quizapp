@@ -50,7 +50,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  questionEl.innerText = quizQuestions.question;
+  questionEl.innerText = question.question;
   question.choices.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = choice;
