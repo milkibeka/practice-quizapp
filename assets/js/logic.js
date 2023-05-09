@@ -1,8 +1,8 @@
 
-import { questions } from './questions.js';
+const questions = window.questions;
 
 const startBtn = document.getElementById("start");
-const questionContainer = document.getElementById("question-title");
+const questionContainer = document.getElementById("questions");
 const questionEl = document.getElementById("question");
 const answerBtnsEl = document.getElementById("answer-buttons");
 const scoreEl = document.getElementById("score");

@@ -1,4 +1,4 @@
-var questions = [  {    question: "Which of the following is NOT a primitive data type in JavaScript?",    choices: ["Number", "Boolean", "Undefined", "String", "Array"],
+const questions = [  {    question: "Which of the following is NOT a primitive data type in JavaScript?",    choices: ["Number", "Boolean", "Undefined", "String", "Array"],
     answer: "Array"
   },
   {
