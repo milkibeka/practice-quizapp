@@ -2,7 +2,7 @@
 import { questions } from './questions.js';
 
 const startBtn = document.getElementById("start");
-const questionContainer = document.getElementById("questions");
+const questionContainer = document.getElementById("question-title");
 const questionEl = document.getElementById("question");
 const answerBtnsEl = document.getElementById("answer-buttons");
 const scoreEl = document.getElementById("score");
