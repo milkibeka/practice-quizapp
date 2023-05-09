@@ -3,7 +3,7 @@ const questions = window.questions;
 
 const startBtn = document.getElementById("start");
 const questionContainer = document.getElementById("questions");
-const questionEl = document.getElementById("question");
+const questionEl = document.getElementById("question-title");
 const answerBtnsEl = document.getElementById("answer-buttons");
 const scoreEl = document.getElementById("score");
 const timerEl = document.getElementById("time");
@@ -50,7 +50,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  questionEl.innerText = question.question;
+  questionEl.innerText = questions.question;
   question.choices.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = choice;
