@@ -50,4 +50,4 @@ const quizQuestions = [
     answer: "object"
   }
 ];
-
+window.quizQuestions = quizQuestions;
