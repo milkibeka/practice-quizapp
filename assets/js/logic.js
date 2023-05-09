@@ -50,17 +50,13 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  if (!questionEl) {
-    return;
-  }
-  
   questionEl.innerText = question.question;
-  question.answers.forEach((answer) => {
+  question.choices.forEach((answer) => {
     const button = document.createElement("button");
-    button.innerText = answer.text;
+    button.innerText = choice;
     button.classList.add("btn");
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
+    if (answer) {
+      button.dataset.correct = answer;
     }
     button.addEventListener("click", selectAnswer);
     answerBtnsEl.appendChild(button);
