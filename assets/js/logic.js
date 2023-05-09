@@ -1,5 +1,4 @@
-
-import quizQuestions from './questions.js';
+import { quizQuestions } from './questions.js';
 const myQuestions = quizQuestions;
 const startBtn = document.getElementById("start");
 const questionContainer = document.getElementById("questions");
