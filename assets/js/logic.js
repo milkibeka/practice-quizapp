@@ -1,4 +1,4 @@
-import { questions } from 'questions.js';
+import { questions } from './questions.js';
 const startBtn = document.getElementById("start");
 const questionContainer = document.getElementById("questions");
 const questionEl = document.getElementById("question");
