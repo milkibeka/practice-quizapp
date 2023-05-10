@@ -55,16 +55,21 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionEl.innerText = question.question;
-  question.choices.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerText = answer;  // change 'choice' to 'answer'
-    button.classList.add("btn");
-    if (answer) {
-      button.dataset.correct = answer;
+  if (answerBtnsEl !== null) {
+    while (answerBtnsEl.firstChild) {
+      answerBtnsEl.removeChild(answerBtnsEl.firstChild);
     }
-    button.addEventListener("click", selectAnswer);
-    answerBtnsEl.appendChild(button);
-  });
+    question.choices.forEach((answer) => {
+      const button = document.createElement("button");
+      button.innerText = answer;
+      button.classList.add("btn");
+      if (answer) {
+        button.dataset.correct = answer;
+      }
+      button.addEventListener("click", selectAnswer);
+      answerBtnsEl.appendChild(button);
+    });
+  }
 }
 
 function resetState() {
