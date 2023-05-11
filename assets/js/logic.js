@@ -16,6 +16,7 @@ const feedbackEl = document.getElementById("feedback");
 const initialsEl = document.getElementById("initials");
 const submitBtn = document.getElementById("submit");
 const highscoresLink = document.getElementById("highscores-link");
+const endScreen = document.getElementById("end-screen");
 
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
