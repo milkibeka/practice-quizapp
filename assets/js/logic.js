@@ -65,8 +65,11 @@ function showQuestion(question) {
       button.innerText = answer;
       button.classList.add('btn');
 
+      // Check if the answer matches the correct answer
       if (answer === question.answer) {
-        button.dataset.correct = true;
+        button.dataset.correct = 'true';
+      } else {
+        button.dataset.correct = 'false';
       }
 
       button.addEventListener('click', selectAnswer);
@@ -74,6 +77,7 @@ function showQuestion(question) {
     });
   }
 }
+
 
 function resetState() {
   clearStatusClass(document.body);
