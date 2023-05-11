@@ -55,18 +55,15 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionEl.innerText = question.question;
-  if (answerBtnsEl !== null) {
-    while (answerBtnsEl.firstChild) {
-      answerBtnsEl.removeChild(answerBtnsEl.firstChild);
-    }
+
+  if (answerBtnsEl) {
+    answerBtnsEl.innerHTML = '';
+
     question.choices.forEach((answer) => {
-      const button = document.createElement("button");
+      const button = document.createElement('button');
       button.innerText = answer;
-      button.classList.add("btn");
-      if (answer) {
-        button.dataset.correct = answer;
-      }
-      button.addEventListener("click", selectAnswer);
+      button.classList.add('btn');
+      button.addEventListener('click', selectAnswer);
       answerBtnsEl.appendChild(button);
     });
   }
