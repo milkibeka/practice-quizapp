@@ -79,6 +79,7 @@ function showQuestion(question) {
 }
 
 
+
 function resetState() {
   clearStatusClass(document.body);
   feedbackEl.innerText = "";
