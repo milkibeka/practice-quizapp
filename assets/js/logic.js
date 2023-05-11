@@ -141,6 +141,7 @@ function endQuiz() {
   clearInterval(timerInterval);
   questionContainer.classList.add("hide");
   initialsEl.classList.remove("hide");
+  endScreen.classList.remove("hide");
 }
 
 function saveScore() {
