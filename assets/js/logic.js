@@ -1,4 +1,4 @@
-import { quizQuestions } from './questions.js';
+
 
 const myQuestions = quizQuestions.map(question => ({
   question: question.question,
@@ -13,9 +13,6 @@ const answerBtnsEl = document.getElementById("answer-buttons");
 const scoreEl = document.getElementById("score");
 const timerEl = document.getElementById("time");
 const feedbackEl = document.getElementById("feedback");
-const initialsEl = document.getElementById("initials");
-const submitBtn = document.getElementById("submit");
-const highscoresLink = document.getElementById("highscores-link");
 const endScreen = document.getElementById("end-screen");
 
 let shuffledQuestions, currentQuestionIndex;
@@ -24,8 +21,7 @@ let secondsLeft = 60;
 let timerInterval;
 
 startBtn.addEventListener("click", startQuiz);
-submitBtn.addEventListener("click", saveScore);
-highscoresLink.addEventListener("click", showHighscores);
+
 
 function startQuiz() {
   score = 0;
@@ -99,11 +95,13 @@ function selectAnswer(e) {
 
   if (correct) {
     score += 10;
+    feedbackEl.innerText = "Correct!";
   } else {
+    feedbackEl.innerText = "Wrong!";
     secondsLeft -= 10;
   }
 
-  feedbackEl.innerText = correct ? "Correct!" : "Wrong!";
+ 
   scoreEl.innerText = "Score: " + score;
 
   Array.from(answerBtnsEl.children).forEach((button) => {
@@ -145,30 +143,4 @@ function endQuiz() {
   endScreen.classList.remove("hide");
 }
 
-function saveScore() {
-  const initials = initialsEl.value.toUpperCase();
-  if (initials !== "") {
-    const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-    highscores.push({ initials, score: score });
-    localStorage.setItem("highscores", JSON.stringify(highscores));
-    window.location.assign("highscores.html");
-  }
-}
-function showHighscores() {
-  const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 
-  // Sort highscores in descending order
-  highscores.sort((a, b) => b.score - a.score);
-
-  const highscoresList = document.getElementById("highscores");
-
-  // Clear highscores list
-  highscoresList.innerHTML = "";
-
-  // Display each highscore in the list
-  highscores.forEach((highscore) => {
-    const li = document.createElement("li");
-    li.textContent = `${highscore.initials}: ${highscore.score}`;
-    highscoresList.appendChild(li);
-  });
-}
